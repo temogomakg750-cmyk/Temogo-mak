@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills &amp; Projects | Temogo Makgalemela</title>
+<meta name="description" content="Skills showcase: nested IF logic in pseudocode and a six-step computer troubleshooting method.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">Temogo <span>Makgalemela</span></a>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="document.getElementById('menu').classList.toggle('open')">☰ Menu</button>
+    <nav aria-label="Main navigation">
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="reflection.html">Academic Reflection</a></li>
+        <li><a href="group-work.html">Group Work</a></li>
+        <li><a class="active" href="skills.html">Skills &amp; Projects</a></li>
+        <li><a href="application-letter.html">Application Letter</a></li>
+        <li><a href="email-template.html">Email Template</a></li>
+        <li><a href="study-tips.html">Study Tips</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <h1 class="page-title">Skills &amp; Projects</h1>
+  <p class="page-sub">Two skills I have developed during my first year of Computer Systems Engineering.</p>
+
+  <section class="card">
+    <h2>Skill 1: Algorithm Design with Nested IF Statements</h2>
+    <p><strong>The problem.</strong> At BAC a student can score any mark between 0% and 100% inclusive. The mark determines the grade as follows:</p>
+    <table>
+      <thead><tr><th>Mark range</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>0 - 39</td><td>Fail</td></tr>
+        <tr><td>40 - 59</td><td>Pass</td></tr>
+        <tr><td>60 - 69</td><td>Merit</td></tr>
+        <tr><td>Above 69</td><td>Distinction</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px"><strong>Required.</strong> Use nested IF statements to write logic that determines the result a student achieves based on the mark they score.</p>
+    <h3>My solution (pseudocode)</h3>
+<pre>START
+IF mark &gt;= 0 AND mark &lt;= 100 THEN
+    IF mark &lt;= 39 THEN
+        PRINT "Fail"
+    ELSE
+        IF mark &lt;= 59 THEN
+            PRINT "Pass"
+        ELSE
+            IF mark &lt;= 69 THEN
+                PRINT "Merit"
+            ELSE
+                PRINT "Distinction"
+            ENDIF
+        ENDIF
+    ENDIF
+ELSE
+    PRINT "Invalid mark"
+ENDIF
+STOP</pre>
+    <h3>How it works</h3>
+    <p>The outer IF first validates the mark, so anything below 0 or above 100 prints "Invalid mark". Inside it, the conditions are tested from the lowest range upwards. Each ELSE branch only runs when the previous condition was false, so the upper limit of each range does not need to be repeated.</p>
+  </section>
+
+  <section class="card">
+    <h2>Skill 2: Troubleshooting a Computer</h2>
+    <p>Troubleshooting is a technique used to identify and analyse a problem and come up with a solution for that particular problem.</p>
+    <p><strong>Scenario.</strong> As a computer systems engineer, a home user calls you because their computer is failing to connect to the network at home. What measures will you take to solve this connectivity issue?</p>
+    <h3>My solution</h3>
+    <ol class="steps">
+      <li><strong>Identify the problem.</strong> Ask the user about the connectivity issue.</li>
+      <li><strong>Establish a theory.</strong> Identify the possible causes of the problem.</li>
+      <li><strong>Test the theory.</strong> Check whether the suspected cause is correct.</li>
+      <li><strong>Plan and implement a solution.</strong> Apply the appropriate fix.</li>
+      <li><strong>Verify functionality.</strong> Confirm that internet access works.</li>
+      <li><strong>Document findings.</strong> Record the problem, its cause and the solution.</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="site">
+  <p>© 2026 Temogo Makgalemela · Botswana Accountancy College · SCIS111 Communication and Study Skills (Digital Portfolio)</p>
+</footer>
+</body>
+</html>
